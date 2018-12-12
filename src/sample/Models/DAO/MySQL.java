@@ -11,8 +11,8 @@ public class MySQL
     private static Connection conn = null;
     private static String hostname   = "localhost";
     private static String dbname = "proyBD";
-    private static String dbuser = "topicos";
-    private static String dbpass = "TOPICOS1";
+    private static String dbuser = "root";
+    private static String dbpass = "tachygs98";
     
 
     public static void Connect()

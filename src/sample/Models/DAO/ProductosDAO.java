@@ -49,6 +49,35 @@ public class ProductosDAO
         return prod;
     }
 
+    public ObservableList<Productos> findSome()
+    {
+        ObservableList<sample.Models.Productos> prod = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT cveProducto,nombreProd,precio,cvePromo FROM productos";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            sample.Models.Productos p = null;
+            while(rs.next()) {
+                p = new sample.Models.Productos(
+                        rs.getInt("cveProducto"),
+                        rs.getInt("cveTipo"),
+                        rs.getInt("cvePromo"),
+                        rs.getInt("cveProveedor"),
+                        rs.getDouble("precio"),
+                        rs.getString("nombreProd")
+                );
+                prod.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return prod;
+    }
+
 
     public sample.Models.Productos fetch(int id)
     {

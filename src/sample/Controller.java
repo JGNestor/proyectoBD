@@ -17,7 +17,8 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable
 {
-    @FXML JFXButton btnEmpleados,btnClientes,btnTickets,btnProductos,btnCompras,btnSalir;
+    @FXML JFXButton btnEmpleados,btnClientes,btnTickets,
+            btnProductos,btnCompras,btnSalir,btnVender;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -27,6 +28,7 @@ public class Controller implements Initializable
         btnTickets.setOnAction(eventoBtn);
         btnProductos.setOnAction(eventoBtn);
         btnCompras.setOnAction(eventoBtn);
+        btnVender.setOnAction(eventoBtn);
         btnSalir.setOnAction(salir);
     }
 
@@ -115,6 +117,24 @@ public class Controller implements Initializable
                     stage.setTitle("Compras");
                     Parent root = null;
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/Vistas/VistaCompras.fxml"));
+                    root = loader.load();
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.setResizable(false);
+                    stage.show();
+                    (((Button) event.getSource()).getScene().getWindow()).hide();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            else if (event.getSource().equals(btnVender))
+            {
+                try
+                {
+                    Stage stage = new Stage();
+                    stage.setTitle("Vender");
+                    Parent root = null;
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/Vistas/VistaVenta.fxml"));
                     root = loader.load();
                     Scene scene = new Scene(root);
                     stage.setScene(scene);

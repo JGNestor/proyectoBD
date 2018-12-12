@@ -39,6 +39,8 @@
         <HBox GridPane.rowIndex="3" GridPane.columnIndex="1" alignment="CENTER">
             <JFXButton fx:id="btnProductos" text="Productos" buttonType="FLAT" textFill="blue" textAlignment="CENTER"
                        prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXButton fx:id="btnVender" text="Vender" buttonType="FLAT" textFill="#53b50b" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
         </HBox>
 
         <HBox GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER">
