@@ -1,0 +1,49 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<AnchorPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="300.0" prefWidth="300.0">
+
+    <StackPane AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+        <ImageView fitWidth="400" fitHeight="400">
+            <image>
+                <Image url="/sample/Resources/Images/donas.jpg"/>
+            </image>
+        </ImageView>
+    </StackPane>
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30"
+                                           AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnEmpleados" text="Empleados" buttonType="FLAT" textFill="blue" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+
+            <JFXButton fx:id="btnClientes" text="Clientes" buttonType="FLAT" textFill="blue" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnTickets" text="Tickets" buttonType="FLAT" textFill="blue" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXButton fx:id="btnCompras" text="Compras" buttonType="FLAT" textFill="blue" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="3" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnProductos" text="Productos" buttonType="FLAT" textFill="blue" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnSalir" text="Salir" buttonType="FLAT" textFill="red" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+    </GridPane>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controladores.VistaProductos">
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30"
+              AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+        <VBox GridPane.rowIndex="0" GridPane.columnIndex="1" alignment="CENTER">
+            <TableView fx:id="tablaProds" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <columns>
+                    <TableColumn fx:id="prod" text="cveProducto"/>
+                    <TableColumn fx:id="tipo" text="cveTipo"/>
+                    <TableColumn fx:id="promo" text="cvePromo"/>
+                    <TableColumn fx:id="prov" text="cveProveedor"/>
+                    <TableColumn fx:id="price" text="precio"/>
+                    <TableColumn fx:id="nameProd" text="nombreProd"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="updateTable" text="Update Table" buttonType="FLAT" textFill="dodgerblue" textAlignment="CENTER"
+                       style="-fx-background-color: inherit"/>
+            <JFXButton fx:id="edit" text="Editar" buttonType="FLAT" textFill="green" textAlignment="CENTER"
+                       style="-fx-background-color: inherit"/>
+            <JFXButton fx:id="add" text="Agregar" buttonType="FLAT" textFill="darkgoldenrod" textAlignment="CENTER"
+                       style="-fx-background-color: inherit"/>
+            <JFXButton fx:id="delete" text="Borrar" buttonType="FLAT" textFill="darkorange" textAlignment="CENTER"
+                       style="-fx-background-color: inherit"/>
+            <JFXButton fx:id="exit" text="Salir" buttonType="FLAT" textFill="indianred" textAlignment="CENTER"
+                       style="-fx-background-color: inherit"/>
+        </HBox>
+    </GridPane>
+
+</AnchorPane>

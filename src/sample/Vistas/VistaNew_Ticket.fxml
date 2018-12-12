@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30"
+              AnchorPane.rightAnchor="30" AnchorPane.topAnchor="100">
+
+        <HBox GridPane.rowIndex="0" GridPane.columnIndex="0" alignment="CENTER">
+            <Label text="noTicket:       "/>
+            <JFXTextField fx:id="txtFnoTicket" text="" alignment="CENTER" focusColor="dodgerblue"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="0" alignment="CENTER">
+            <Label text="cveCliente:      "/>
+            <JFXTextField fx:id="txtFcveCli" text="" alignment="CENTER" focusColor="dodgerblue"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="0" alignment="CENTER">
+            <Label text="cveEmpleado:      "/>
+            <JFXTextField fx:id="txtFcveEmp" text="" alignment="CENTER" focusColor="dodgerblue"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="3" GridPane.columnIndex="0" alignment="CENTER">
+            <Label text="cvePago:      "/>
+            <JFXTextField fx:id="txtFcvePago" text="" alignment="CENTER" focusColor="dodgerblue"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="4" GridPane.columnIndex="0" alignment="CENTER">
+            <Label text="Fecha(AAAA-MM-DD):      "/>
+            <JFXTextField fx:id="txtFdate" text="" alignment="CENTER" focusColor="dodgerblue"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="5" GridPane.columnIndex="0" alignment="CENTER">
+            <Label text="Total:      "/>
+            <JFXTextField fx:id="txtFTotal" text="" alignment="CENTER" focusColor="dodgerblue"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="9" GridPane.columnIndex="0" alignment="CENTER">
+            <JFXButton fx:id="save" text="Agregar" buttonType="FLAT" textFill="green"
+                       textAlignment="CENTER" style="-fx-background-color: inherit"/>
+
+            <JFXButton fx:id="cancel" text="Cancelar" buttonType="FLAT" textFill="red"
+                       textAlignment="CENTER" style="-fx-background-color: inherit"/>
+        </HBox>
+    </GridPane>
+
+</AnchorPane>

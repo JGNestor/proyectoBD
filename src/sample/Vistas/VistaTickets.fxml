@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controladores.VistaTickets">
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30"
+              AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnTiC" text="Tickets por cliente" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="cli" promptText="cveCliente" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnTiE" text="Tickets por empleado" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="emp" promptText="cveEmpleado" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="3" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnTiF" text="Ventas por tickets" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="VxT" promptText="num ticket" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnAgregar" text="Registrar" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXButton fx:id="btnBorrar" text="Eliminar" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXButton fx:id="btnSalir" text="Atras" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+
+        <VBox GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER">
+            <TableView fx:id="tablaCli" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <columns>
+                    <TableColumn fx:id="noTicket" text="noTicket"/>
+                    <TableColumn fx:id="cveCliente" text="cveCliente"/>
+                    <TableColumn fx:id="cveEmpleado" text="cveEmpleado"/>
+                    <TableColumn fx:id="cvePago" text="cvePago"/>
+                    <TableColumn fx:id="fecha" text="fecha"/>
+                    <TableColumn fx:id="total" text="total"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </GridPane>
+
+</AnchorPane>

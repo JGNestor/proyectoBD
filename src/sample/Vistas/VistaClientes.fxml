@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controladores.VistaClientes"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30"
+              AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnCliG" text="Clientes por genero" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="gen" promptText="F o M" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnCliC" text="Clientes por ciudad" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="ciu" promptText="cveCiudad" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="3" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnB" text="Filtrar por ambos" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+
+            <JFXButton fx:id="btnSalir" text="Atras" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+
+        <VBox GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER">
+            <TableView fx:id="tablaCli" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <columns>
+                    <TableColumn fx:id="cveCliente" text="cveCliente"/>
+                    <TableColumn fx:id="nombre" text="nombre"/>
+                    <TableColumn fx:id="genero" text="genero"/>
+                    <TableColumn fx:id="cveCiudad" text="cveCiudad"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </GridPane>
+</AnchorPane>

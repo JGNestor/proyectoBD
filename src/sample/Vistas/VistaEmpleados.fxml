@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controladores.VistaEmpleados"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <GridPane alignment="CENTER" vgap="25" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30"
+              AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnEmpR" text="Empleados por rol" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="rol" promptText="cveRol" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnEmpS" text="Empleados por Sucursal" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXTextField fx:id="suc" promptText="cveSucursal" alignment="CENTER" focusColor="dodgerblue" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="3" GridPane.columnIndex="1" alignment="CENTER">
+            <JFXButton fx:id="btnB" text="Filtrar por ambos" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="150" prefHeight="30" style="-fx-background-color: inherit" />
+            <JFXButton fx:id="btnSalir" text="Atras" buttonType="FLAT" textAlignment="CENTER"
+                       prefWidth="100" prefHeight="30" style="-fx-background-color: inherit" />
+        </HBox>
+
+        <VBox GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER">
+            <TableView fx:id="tablaEmp" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <columns>
+                    <TableColumn fx:id="cveEmpleado" text="cveEmpleado"/>
+                    <TableColumn fx:id="nombreEmpleado" text="nombreEmpleado"/>
+                    <TableColumn fx:id="cveRol" text="cveRol"/>
+                    <TableColumn fx:id="cveSucursal" text="cveSucursal"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </GridPane>
+
+</AnchorPane>
